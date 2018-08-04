@@ -15,6 +15,22 @@
 		CDA20D462115D01900B6EB49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA20D442115D01900B6EB49 /* LaunchScreen.storyboard */; };
 		CDA20D512115D01900B6EB49 /* SRNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D502115D01900B6EB49 /* SRNetworkTests.swift */; };
 		CDA20D5C2115D01900B6EB49 /* SRNetworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D5B2115D01900B6EB49 /* SRNetworkUITests.swift */; };
+		CDA20D6F211606D400B6EB49 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D6C211606D400B6EB49 /* JSONParameterEncoder.swift */; };
+		CDA20D70211606D400B6EB49 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D6C211606D400B6EB49 /* JSONParameterEncoder.swift */; };
+		CDA20D71211606D400B6EB49 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D6D211606D400B6EB49 /* ParameterEncoding.swift */; };
+		CDA20D72211606D400B6EB49 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D6D211606D400B6EB49 /* ParameterEncoding.swift */; };
+		CDA20D73211606D400B6EB49 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D6E211606D400B6EB49 /* URLParameterEncoding.swift */; };
+		CDA20D74211606D400B6EB49 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D6E211606D400B6EB49 /* URLParameterEncoding.swift */; };
+		CDA20D772116072300B6EB49 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D762116072300B6EB49 /* EndPointType.swift */; };
+		CDA20D782116072300B6EB49 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D762116072300B6EB49 /* EndPointType.swift */; };
+		CDA20D7D2116073A00B6EB49 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D792116073A00B6EB49 /* NetworkService.swift */; };
+		CDA20D7E2116073A00B6EB49 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D792116073A00B6EB49 /* NetworkService.swift */; };
+		CDA20D812116073A00B6EB49 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D7B2116073A00B6EB49 /* HTTPMethod.swift */; };
+		CDA20D822116073A00B6EB49 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D7B2116073A00B6EB49 /* HTTPMethod.swift */; };
+		CDA20D832116073A00B6EB49 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D7C2116073A00B6EB49 /* HTTPTask.swift */; };
+		CDA20D842116073A00B6EB49 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D7C2116073A00B6EB49 /* HTTPTask.swift */; };
+		CDA20D862116089700B6EB49 /* NetworkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D852116089700B6EB49 /* NetworkLog.swift */; };
+		CDA20D872116089700B6EB49 /* NetworkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D852116089700B6EB49 /* NetworkLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +65,14 @@
 		CDA20D572115D01900B6EB49 /* SRNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SRNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA20D5B2115D01900B6EB49 /* SRNetworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkUITests.swift; sourceTree = "<group>"; };
 		CDA20D5D2115D01900B6EB49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDA20D6C211606D400B6EB49 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		CDA20D6D211606D400B6EB49 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		CDA20D6E211606D400B6EB49 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
+		CDA20D762116072300B6EB49 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		CDA20D792116073A00B6EB49 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CDA20D7B2116073A00B6EB49 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		CDA20D7C2116073A00B6EB49 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		CDA20D852116089700B6EB49 /* NetworkLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +123,8 @@
 		CDA20D372115D00C00B6EB49 /* SRNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				CDA20D382115D00C00B6EB49 /* AppDelegate.swift */,
-				CDA20D3A2115D00C00B6EB49 /* ViewController.swift */,
-				CDA20D3C2115D00C00B6EB49 /* Main.storyboard */,
-				CDA20D422115D01900B6EB49 /* Assets.xcassets */,
-				CDA20D442115D01900B6EB49 /* LaunchScreen.storyboard */,
-				CDA20D472115D01900B6EB49 /* Info.plist */,
-				CDA20D3F2115D00C00B6EB49 /* SRNetwork.xcdatamodeld */,
+				CDA20D6A2116066400B6EB49 /* SRNetworkLayer */,
+				CDA20D692116063B00B6EB49 /* Application */,
 			);
 			path = SRNetwork;
 			sourceTree = "<group>";
@@ -126,6 +145,51 @@
 				CDA20D5D2115D01900B6EB49 /* Info.plist */,
 			);
 			path = SRNetworkUITests;
+			sourceTree = "<group>";
+		};
+		CDA20D692116063B00B6EB49 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CDA20D382115D00C00B6EB49 /* AppDelegate.swift */,
+				CDA20D3A2115D00C00B6EB49 /* ViewController.swift */,
+				CDA20D3C2115D00C00B6EB49 /* Main.storyboard */,
+				CDA20D422115D01900B6EB49 /* Assets.xcassets */,
+				CDA20D442115D01900B6EB49 /* LaunchScreen.storyboard */,
+				CDA20D472115D01900B6EB49 /* Info.plist */,
+				CDA20D3F2115D00C00B6EB49 /* SRNetwork.xcdatamodeld */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CDA20D6A2116066400B6EB49 /* SRNetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CDA20D752116070100B6EB49 /* Service */,
+				CDA20D6B211606B500B6EB49 /* Encoding */,
+			);
+			path = SRNetworkLayer;
+			sourceTree = "<group>";
+		};
+		CDA20D6B211606B500B6EB49 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				CDA20D6C211606D400B6EB49 /* JSONParameterEncoder.swift */,
+				CDA20D6D211606D400B6EB49 /* ParameterEncoding.swift */,
+				CDA20D6E211606D400B6EB49 /* URLParameterEncoding.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		CDA20D752116070100B6EB49 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CDA20D852116089700B6EB49 /* NetworkLog.swift */,
+				CDA20D762116072300B6EB49 /* EndPointType.swift */,
+				CDA20D7B2116073A00B6EB49 /* HTTPMethod.swift */,
+				CDA20D7C2116073A00B6EB49 /* HTTPTask.swift */,
+				CDA20D792116073A00B6EB49 /* NetworkService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +323,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDA20D862116089700B6EB49 /* NetworkLog.swift in Sources */,
+				CDA20D7D2116073A00B6EB49 /* NetworkService.swift in Sources */,
+				CDA20D6F211606D400B6EB49 /* JSONParameterEncoder.swift in Sources */,
 				CDA20D412115D00C00B6EB49 /* SRNetwork.xcdatamodeld in Sources */,
+				CDA20D71211606D400B6EB49 /* ParameterEncoding.swift in Sources */,
 				CDA20D3B2115D00C00B6EB49 /* ViewController.swift in Sources */,
+				CDA20D73211606D400B6EB49 /* URLParameterEncoding.swift in Sources */,
+				CDA20D832116073A00B6EB49 /* HTTPTask.swift in Sources */,
 				CDA20D392115D00C00B6EB49 /* AppDelegate.swift in Sources */,
+				CDA20D812116073A00B6EB49 /* HTTPMethod.swift in Sources */,
+				CDA20D772116072300B6EB49 /* EndPointType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +341,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDA20D872116089700B6EB49 /* NetworkLog.swift in Sources */,
+				CDA20D74211606D400B6EB49 /* URLParameterEncoding.swift in Sources */,
+				CDA20D72211606D400B6EB49 /* ParameterEncoding.swift in Sources */,
+				CDA20D842116073A00B6EB49 /* HTTPTask.swift in Sources */,
+				CDA20D70211606D400B6EB49 /* JSONParameterEncoder.swift in Sources */,
+				CDA20D822116073A00B6EB49 /* HTTPMethod.swift in Sources */,
+				CDA20D782116072300B6EB49 /* EndPointType.swift in Sources */,
+				CDA20D7E2116073A00B6EB49 /* NetworkService.swift in Sources */,
 				CDA20D512115D01900B6EB49 /* SRNetworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
