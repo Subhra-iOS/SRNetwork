@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CDA20D392115D00C00B6EB49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D382115D00C00B6EB49 /* AppDelegate.swift */; };
+		CDA20D3B2115D00C00B6EB49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D3A2115D00C00B6EB49 /* ViewController.swift */; };
+		CDA20D3E2115D00C00B6EB49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA20D3C2115D00C00B6EB49 /* Main.storyboard */; };
+		CDA20D412115D00C00B6EB49 /* SRNetwork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D3F2115D00C00B6EB49 /* SRNetwork.xcdatamodeld */; };
+		CDA20D432115D01900B6EB49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA20D422115D01900B6EB49 /* Assets.xcassets */; };
+		CDA20D462115D01900B6EB49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA20D442115D01900B6EB49 /* LaunchScreen.storyboard */; };
+		CDA20D512115D01900B6EB49 /* SRNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D502115D01900B6EB49 /* SRNetworkTests.swift */; };
+		CDA20D5C2115D01900B6EB49 /* SRNetworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D5B2115D01900B6EB49 /* SRNetworkUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDA20D4D2115D01900B6EB49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDA20D2D2115D00C00B6EB49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDA20D342115D00C00B6EB49;
+			remoteInfo = SRNetwork;
+		};
+		CDA20D582115D01900B6EB49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDA20D2D2115D00C00B6EB49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDA20D342115D00C00B6EB49;
+			remoteInfo = SRNetwork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CDA20D352115D00C00B6EB49 /* SRNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA20D382115D00C00B6EB49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDA20D3A2115D00C00B6EB49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDA20D3D2115D00C00B6EB49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDA20D402115D00C00B6EB49 /* SRNetwork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SRNetwork.xcdatamodel; sourceTree = "<group>"; };
+		CDA20D422115D01900B6EB49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDA20D452115D01900B6EB49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDA20D472115D01900B6EB49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDA20D4C2115D01900B6EB49 /* SRNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SRNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA20D502115D01900B6EB49 /* SRNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkTests.swift; sourceTree = "<group>"; };
+		CDA20D522115D01900B6EB49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDA20D572115D01900B6EB49 /* SRNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SRNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA20D5B2115D01900B6EB49 /* SRNetworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkUITests.swift; sourceTree = "<group>"; };
+		CDA20D5D2115D01900B6EB49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDA20D322115D00C00B6EB49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA20D492115D01900B6EB49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA20D542115D01900B6EB49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDA20D2C2115D00C00B6EB49 = {
+			isa = PBXGroup;
+			children = (
+				CDA20D372115D00C00B6EB49 /* SRNetwork */,
+				CDA20D4F2115D01900B6EB49 /* SRNetworkTests */,
+				CDA20D5A2115D01900B6EB49 /* SRNetworkUITests */,
+				CDA20D362115D00C00B6EB49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDA20D362115D00C00B6EB49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDA20D352115D00C00B6EB49 /* SRNetwork.app */,
+				CDA20D4C2115D01900B6EB49 /* SRNetworkTests.xctest */,
+				CDA20D572115D01900B6EB49 /* SRNetworkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDA20D372115D00C00B6EB49 /* SRNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				CDA20D382115D00C00B6EB49 /* AppDelegate.swift */,
+				CDA20D3A2115D00C00B6EB49 /* ViewController.swift */,
+				CDA20D3C2115D00C00B6EB49 /* Main.storyboard */,
+				CDA20D422115D01900B6EB49 /* Assets.xcassets */,
+				CDA20D442115D01900B6EB49 /* LaunchScreen.storyboard */,
+				CDA20D472115D01900B6EB49 /* Info.plist */,
+				CDA20D3F2115D00C00B6EB49 /* SRNetwork.xcdatamodeld */,
+			);
+			path = SRNetwork;
+			sourceTree = "<group>";
+		};
+		CDA20D4F2115D01900B6EB49 /* SRNetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDA20D502115D01900B6EB49 /* SRNetworkTests.swift */,
+				CDA20D522115D01900B6EB49 /* Info.plist */,
+			);
+			path = SRNetworkTests;
+			sourceTree = "<group>";
+		};
+		CDA20D5A2115D01900B6EB49 /* SRNetworkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CDA20D5B2115D01900B6EB49 /* SRNetworkUITests.swift */,
+				CDA20D5D2115D01900B6EB49 /* Info.plist */,
+			);
+			path = SRNetworkUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDA20D342115D00C00B6EB49 /* SRNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDA20D602115D01900B6EB49 /* Build configuration list for PBXNativeTarget "SRNetwork" */;
+			buildPhases = (
+				CDA20D312115D00C00B6EB49 /* Sources */,
+				CDA20D322115D00C00B6EB49 /* Frameworks */,
+				CDA20D332115D00C00B6EB49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SRNetwork;
+			productName = SRNetwork;
+			productReference = CDA20D352115D00C00B6EB49 /* SRNetwork.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CDA20D4B2115D01900B6EB49 /* SRNetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDA20D632115D01900B6EB49 /* Build configuration list for PBXNativeTarget "SRNetworkTests" */;
+			buildPhases = (
+				CDA20D482115D01900B6EB49 /* Sources */,
+				CDA20D492115D01900B6EB49 /* Frameworks */,
+				CDA20D4A2115D01900B6EB49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDA20D4E2115D01900B6EB49 /* PBXTargetDependency */,
+			);
+			name = SRNetworkTests;
+			productName = SRNetworkTests;
+			productReference = CDA20D4C2115D01900B6EB49 /* SRNetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CDA20D562115D01900B6EB49 /* SRNetworkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDA20D662115D01900B6EB49 /* Build configuration list for PBXNativeTarget "SRNetworkUITests" */;
+			buildPhases = (
+				CDA20D532115D01900B6EB49 /* Sources */,
+				CDA20D542115D01900B6EB49 /* Frameworks */,
+				CDA20D552115D01900B6EB49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDA20D592115D01900B6EB49 /* PBXTargetDependency */,
+			);
+			name = SRNetworkUITests;
+			productName = SRNetworkUITests;
+			productReference = CDA20D572115D01900B6EB49 /* SRNetworkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDA20D2D2115D00C00B6EB49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Subhr Roy";
+				TargetAttributes = {
+					CDA20D342115D00C00B6EB49 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					CDA20D4B2115D01900B6EB49 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = CDA20D342115D00C00B6EB49;
+					};
+					CDA20D562115D01900B6EB49 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = CDA20D342115D00C00B6EB49;
+					};
+				};
+			};
+			buildConfigurationList = CDA20D302115D00C00B6EB49 /* Build configuration list for PBXProject "SRNetwork" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDA20D2C2115D00C00B6EB49;
+			productRefGroup = CDA20D362115D00C00B6EB49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDA20D342115D00C00B6EB49 /* SRNetwork */,
+				CDA20D4B2115D01900B6EB49 /* SRNetworkTests */,
+				CDA20D562115D01900B6EB49 /* SRNetworkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDA20D332115D00C00B6EB49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA20D462115D01900B6EB49 /* LaunchScreen.storyboard in Resources */,
+				CDA20D432115D01900B6EB49 /* Assets.xcassets in Resources */,
+				CDA20D3E2115D00C00B6EB49 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA20D4A2115D01900B6EB49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA20D552115D01900B6EB49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDA20D312115D00C00B6EB49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA20D412115D00C00B6EB49 /* SRNetwork.xcdatamodeld in Sources */,
+				CDA20D3B2115D00C00B6EB49 /* ViewController.swift in Sources */,
+				CDA20D392115D00C00B6EB49 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA20D482115D01900B6EB49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA20D512115D01900B6EB49 /* SRNetworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA20D532115D01900B6EB49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA20D5C2115D01900B6EB49 /* SRNetworkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDA20D4E2115D01900B6EB49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDA20D342115D00C00B6EB49 /* SRNetwork */;
+			targetProxy = CDA20D4D2115D01900B6EB49 /* PBXContainerItemProxy */;
+		};
+		CDA20D592115D01900B6EB49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDA20D342115D00C00B6EB49 /* SRNetwork */;
+			targetProxy = CDA20D582115D01900B6EB49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CDA20D3C2115D00C00B6EB49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDA20D3D2115D00C00B6EB49 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CDA20D442115D01900B6EB49 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDA20D452115D01900B6EB49 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDA20D5E2115D01900B6EB49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDA20D5F2115D01900B6EB49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDA20D612115D01900B6EB49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZH7Z5723YF;
+				INFOPLIST_FILE = SRNetwork/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devSR.SRNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDA20D622115D01900B6EB49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZH7Z5723YF;
+				INFOPLIST_FILE = SRNetwork/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devSR.SRNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CDA20D642115D01900B6EB49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZH7Z5723YF;
+				INFOPLIST_FILE = SRNetworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devSR.SRNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SRNetwork.app/SRNetwork";
+			};
+			name = Debug;
+		};
+		CDA20D652115D01900B6EB49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZH7Z5723YF;
+				INFOPLIST_FILE = SRNetworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devSR.SRNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SRNetwork.app/SRNetwork";
+			};
+			name = Release;
+		};
+		CDA20D672115D01900B6EB49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZH7Z5723YF;
+				INFOPLIST_FILE = SRNetworkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devSR.SRNetworkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SRNetwork;
+			};
+			name = Debug;
+		};
+		CDA20D682115D01900B6EB49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZH7Z5723YF;
+				INFOPLIST_FILE = SRNetworkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devSR.SRNetworkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SRNetwork;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDA20D302115D00C00B6EB49 /* Build configuration list for PBXProject "SRNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA20D5E2115D01900B6EB49 /* Debug */,
+				CDA20D5F2115D01900B6EB49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDA20D602115D01900B6EB49 /* Build configuration list for PBXNativeTarget "SRNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA20D612115D01900B6EB49 /* Debug */,
+				CDA20D622115D01900B6EB49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDA20D632115D01900B6EB49 /* Build configuration list for PBXNativeTarget "SRNetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA20D642115D01900B6EB49 /* Debug */,
+				CDA20D652115D01900B6EB49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDA20D662115D01900B6EB49 /* Build configuration list for PBXNativeTarget "SRNetworkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA20D672115D01900B6EB49 /* Debug */,
+				CDA20D682115D01900B6EB49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CDA20D3F2115D00C00B6EB49 /* SRNetwork.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CDA20D402115D00C00B6EB49 /* SRNetwork.xcdatamodel */,
+			);
+			currentVersion = CDA20D402115D00C00B6EB49 /* SRNetwork.xcdatamodel */;
+			path = SRNetwork.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CDA20D2D2115D00C00B6EB49 /* Project object */;
+}
