@@ -1,6 +1,6 @@
 //
 //  HTTPMethod.swift
-//  NetworkLayer
+//  SRNetwork
 //
 //  Created by Subhr Roy on 04/08/18.
 //  Copyright © 2018 Subhr Roy. All rights reserved.

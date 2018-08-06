@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD3812C32118C42B00370002 /* SROperationTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C22118C42B00370002 /* SROperationTask.swift */; };
+		CD3812C42118C42B00370002 /* SROperationTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C22118C42B00370002 /* SROperationTask.swift */; };
+		CD3812C62118C44100370002 /* SRNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C52118C44100370002 /* SRNetworkManager.swift */; };
+		CD3812C72118C44100370002 /* SRNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C52118C44100370002 /* SRNetworkManager.swift */; };
 		CDA20D392115D00C00B6EB49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D382115D00C00B6EB49 /* AppDelegate.swift */; };
 		CDA20D3B2115D00C00B6EB49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D3A2115D00C00B6EB49 /* ViewController.swift */; };
 		CDA20D3E2115D00C00B6EB49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA20D3C2115D00C00B6EB49 /* Main.storyboard */; };
@@ -51,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD3812C22118C42B00370002 /* SROperationTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SROperationTask.swift; sourceTree = "<group>"; };
+		CD3812C52118C44100370002 /* SRNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkManager.swift; sourceTree = "<group>"; };
 		CDA20D352115D00C00B6EB49 /* SRNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA20D382115D00C00B6EB49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDA20D3A2115D00C00B6EB49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +106,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD3812C02118C37400370002 /* SRNetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				CD3812C52118C44100370002 /* SRNetworkManager.swift */,
+			);
+			path = SRNetworkManager;
+			sourceTree = "<group>";
+		};
+		CD3812C12118C3EB00370002 /* SROperationTask */ = {
+			isa = PBXGroup;
+			children = (
+				CD3812C22118C42B00370002 /* SROperationTask.swift */,
+			);
+			path = SROperationTask;
+			sourceTree = "<group>";
+		};
 		CDA20D2C2115D00C00B6EB49 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +186,8 @@
 		CDA20D6A2116066400B6EB49 /* SRNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				CD3812C12118C3EB00370002 /* SROperationTask */,
+				CD3812C02118C37400370002 /* SRNetworkManager */,
 				CDA20D752116070100B6EB49 /* Service */,
 				CDA20D6B211606B500B6EB49 /* Encoding */,
 			);
@@ -326,8 +350,10 @@
 				CDA20D862116089700B6EB49 /* NetworkLog.swift in Sources */,
 				CDA20D7D2116073A00B6EB49 /* NetworkService.swift in Sources */,
 				CDA20D6F211606D400B6EB49 /* JSONParameterEncoder.swift in Sources */,
+				CD3812C62118C44100370002 /* SRNetworkManager.swift in Sources */,
 				CDA20D412115D00C00B6EB49 /* SRNetwork.xcdatamodeld in Sources */,
 				CDA20D71211606D400B6EB49 /* ParameterEncoding.swift in Sources */,
+				CD3812C32118C42B00370002 /* SROperationTask.swift in Sources */,
 				CDA20D3B2115D00C00B6EB49 /* ViewController.swift in Sources */,
 				CDA20D73211606D400B6EB49 /* URLParameterEncoding.swift in Sources */,
 				CDA20D832116073A00B6EB49 /* HTTPTask.swift in Sources */,
@@ -348,8 +374,10 @@
 				CDA20D70211606D400B6EB49 /* JSONParameterEncoder.swift in Sources */,
 				CDA20D822116073A00B6EB49 /* HTTPMethod.swift in Sources */,
 				CDA20D782116072300B6EB49 /* EndPointType.swift in Sources */,
+				CD3812C72118C44100370002 /* SRNetworkManager.swift in Sources */,
 				CDA20D7E2116073A00B6EB49 /* NetworkService.swift in Sources */,
 				CDA20D512115D01900B6EB49 /* SRNetworkTests.swift in Sources */,
+				CD3812C42118C42B00370002 /* SROperationTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
