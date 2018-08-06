@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD3812C32118C42B00370002 /* SROperationTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C22118C42B00370002 /* SROperationTask.swift */; };
-		CD3812C42118C42B00370002 /* SROperationTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C22118C42B00370002 /* SROperationTask.swift */; };
+		CD3812C32118C42B00370002 /* SRNetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C22118C42B00370002 /* SRNetworkOperation.swift */; };
+		CD3812C42118C42B00370002 /* SRNetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C22118C42B00370002 /* SRNetworkOperation.swift */; };
 		CD3812C62118C44100370002 /* SRNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C52118C44100370002 /* SRNetworkManager.swift */; };
 		CD3812C72118C44100370002 /* SRNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C52118C44100370002 /* SRNetworkManager.swift */; };
 		CDA20D392115D00C00B6EB49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D382115D00C00B6EB49 /* AppDelegate.swift */; };
@@ -55,7 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CD3812C22118C42B00370002 /* SROperationTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SROperationTask.swift; sourceTree = "<group>"; };
+		CD3812C22118C42B00370002 /* SRNetworkOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkOperation.swift; sourceTree = "<group>"; };
 		CD3812C52118C44100370002 /* SRNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkManager.swift; sourceTree = "<group>"; };
 		CDA20D352115D00C00B6EB49 /* SRNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA20D382115D00C00B6EB49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,12 +114,12 @@
 			path = SRNetworkManager;
 			sourceTree = "<group>";
 		};
-		CD3812C12118C3EB00370002 /* SROperationTask */ = {
+		CD3812C12118C3EB00370002 /* SRNetworkOperation */ = {
 			isa = PBXGroup;
 			children = (
-				CD3812C22118C42B00370002 /* SROperationTask.swift */,
+				CD3812C22118C42B00370002 /* SRNetworkOperation.swift */,
 			);
-			path = SROperationTask;
+			path = SRNetworkOperation;
 			sourceTree = "<group>";
 		};
 		CDA20D2C2115D00C00B6EB49 = {
@@ -186,7 +186,7 @@
 		CDA20D6A2116066400B6EB49 /* SRNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				CD3812C12118C3EB00370002 /* SROperationTask */,
+				CD3812C12118C3EB00370002 /* SRNetworkOperation */,
 				CD3812C02118C37400370002 /* SRNetworkManager */,
 				CDA20D752116070100B6EB49 /* Service */,
 				CDA20D6B211606B500B6EB49 /* Encoding */,
@@ -353,7 +353,7 @@
 				CD3812C62118C44100370002 /* SRNetworkManager.swift in Sources */,
 				CDA20D412115D00C00B6EB49 /* SRNetwork.xcdatamodeld in Sources */,
 				CDA20D71211606D400B6EB49 /* ParameterEncoding.swift in Sources */,
-				CD3812C32118C42B00370002 /* SROperationTask.swift in Sources */,
+				CD3812C32118C42B00370002 /* SRNetworkOperation.swift in Sources */,
 				CDA20D3B2115D00C00B6EB49 /* ViewController.swift in Sources */,
 				CDA20D73211606D400B6EB49 /* URLParameterEncoding.swift in Sources */,
 				CDA20D832116073A00B6EB49 /* HTTPTask.swift in Sources */,
@@ -377,7 +377,7 @@
 				CD3812C72118C44100370002 /* SRNetworkManager.swift in Sources */,
 				CDA20D7E2116073A00B6EB49 /* NetworkService.swift in Sources */,
 				CDA20D512115D01900B6EB49 /* SRNetworkTests.swift in Sources */,
-				CD3812C42118C42B00370002 /* SROperationTask.swift in Sources */,
+				CD3812C42118C42B00370002 /* SRNetworkOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
