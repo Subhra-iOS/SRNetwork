@@ -10,7 +10,17 @@ import Foundation
 
 class SRNetworkOperation : Operation {
 	
-	public var  sessionTask : URLSessionTask?
+	public var taskIdentifier : String?
+	
+	convenience  init(_taskIdentifier : String ){
+		self.init()
+		self.taskIdentifier = _taskIdentifier
+	
+	}
+	
+	override private init() {
+		
+	}
 	
 	override var isAsynchronous: Bool  {return true}
 	
@@ -43,13 +53,13 @@ class SRNetworkOperation : Operation {
 	}
 	
 	func cancelOperation() -> Void{
-		self.sessionTask?.cancel()
+	
 		self.isExecuting = false
 		self.isFinished = true
 	}
 	
 	func suspendOperation() -> Void{
-		self.sessionTask?.suspend()
+		
 		self.isExecuting = false
 		self.isFinished = true
 	}
@@ -63,7 +73,7 @@ class SRNetworkOperation : Operation {
 	
 	func resumeOperation() -> Void {
 		self.isExecuting = true;
-		sessionTask?.resume()
+		
 	}
 	
 	override func start() {

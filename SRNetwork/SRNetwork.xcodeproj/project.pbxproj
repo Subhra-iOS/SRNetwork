@@ -35,6 +35,12 @@
 		CDA20D842116073A00B6EB49 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D7C2116073A00B6EB49 /* HTTPTask.swift */; };
 		CDA20D862116089700B6EB49 /* NetworkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D852116089700B6EB49 /* NetworkLog.swift */; };
 		CDA20D872116089700B6EB49 /* NetworkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D852116089700B6EB49 /* NetworkLog.swift */; };
+		CDDADA422119994C00A013C5 /* SRNetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA412119994C00A013C5 /* SRNetworkTask.swift */; };
+		CDDADA432119994C00A013C5 /* SRNetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA412119994C00A013C5 /* SRNetworkTask.swift */; };
+		CDDADA462119ADF600A013C5 /* SRNetworkJsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA452119ADF600A013C5 /* SRNetworkJsonParser.swift */; };
+		CDDADA472119ADF600A013C5 /* SRNetworkJsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA452119ADF600A013C5 /* SRNetworkJsonParser.swift */; };
+		CDDADA4A2119B68100A013C5 /* SRNetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA492119B68100A013C5 /* SRNetworkConstant.swift */; };
+		CDDADA4B2119B68100A013C5 /* SRNetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA492119B68100A013C5 /* SRNetworkConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +85,9 @@
 		CDA20D7B2116073A00B6EB49 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		CDA20D7C2116073A00B6EB49 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		CDA20D852116089700B6EB49 /* NetworkLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLog.swift; sourceTree = "<group>"; };
+		CDDADA412119994C00A013C5 /* SRNetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkTask.swift; sourceTree = "<group>"; };
+		CDDADA452119ADF600A013C5 /* SRNetworkJsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkJsonParser.swift; sourceTree = "<group>"; };
+		CDDADA492119B68100A013C5 /* SRNetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +195,9 @@
 		CDA20D6A2116066400B6EB49 /* SRNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				CDDADA482119B65F00A013C5 /* SRNetworkConstant */,
+				CDDADA442119ADAD00A013C5 /* SRNetworkJsonParser */,
+				CDDADA402119991200A013C5 /* SRNetworkTask */,
 				CD3812C12118C3EB00370002 /* SRNetworkOperation */,
 				CD3812C02118C37400370002 /* SRNetworkManager */,
 				CDA20D752116070100B6EB49 /* Service */,
@@ -214,6 +226,30 @@
 				CDA20D792116073A00B6EB49 /* NetworkService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		CDDADA402119991200A013C5 /* SRNetworkTask */ = {
+			isa = PBXGroup;
+			children = (
+				CDDADA412119994C00A013C5 /* SRNetworkTask.swift */,
+			);
+			path = SRNetworkTask;
+			sourceTree = "<group>";
+		};
+		CDDADA442119ADAD00A013C5 /* SRNetworkJsonParser */ = {
+			isa = PBXGroup;
+			children = (
+				CDDADA452119ADF600A013C5 /* SRNetworkJsonParser.swift */,
+			);
+			path = SRNetworkJsonParser;
+			sourceTree = "<group>";
+		};
+		CDDADA482119B65F00A013C5 /* SRNetworkConstant */ = {
+			isa = PBXGroup;
+			children = (
+				CDDADA492119B68100A013C5 /* SRNetworkConstant.swift */,
+			);
+			path = SRNetworkConstant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDA20D862116089700B6EB49 /* NetworkLog.swift in Sources */,
+				CDDADA422119994C00A013C5 /* SRNetworkTask.swift in Sources */,
 				CDA20D7D2116073A00B6EB49 /* NetworkService.swift in Sources */,
 				CDA20D6F211606D400B6EB49 /* JSONParameterEncoder.swift in Sources */,
 				CD3812C62118C44100370002 /* SRNetworkManager.swift in Sources */,
@@ -355,7 +392,9 @@
 				CDA20D71211606D400B6EB49 /* ParameterEncoding.swift in Sources */,
 				CD3812C32118C42B00370002 /* SRNetworkOperation.swift in Sources */,
 				CDA20D3B2115D00C00B6EB49 /* ViewController.swift in Sources */,
+				CDDADA462119ADF600A013C5 /* SRNetworkJsonParser.swift in Sources */,
 				CDA20D73211606D400B6EB49 /* URLParameterEncoding.swift in Sources */,
+				CDDADA4A2119B68100A013C5 /* SRNetworkConstant.swift in Sources */,
 				CDA20D832116073A00B6EB49 /* HTTPTask.swift in Sources */,
 				CDA20D392115D00C00B6EB49 /* AppDelegate.swift in Sources */,
 				CDA20D812116073A00B6EB49 /* HTTPMethod.swift in Sources */,
@@ -369,6 +408,7 @@
 			files = (
 				CDA20D872116089700B6EB49 /* NetworkLog.swift in Sources */,
 				CDA20D74211606D400B6EB49 /* URLParameterEncoding.swift in Sources */,
+				CDDADA472119ADF600A013C5 /* SRNetworkJsonParser.swift in Sources */,
 				CDA20D72211606D400B6EB49 /* ParameterEncoding.swift in Sources */,
 				CDA20D842116073A00B6EB49 /* HTTPTask.swift in Sources */,
 				CDA20D70211606D400B6EB49 /* JSONParameterEncoder.swift in Sources */,
@@ -376,8 +416,10 @@
 				CDA20D782116072300B6EB49 /* EndPointType.swift in Sources */,
 				CD3812C72118C44100370002 /* SRNetworkManager.swift in Sources */,
 				CDA20D7E2116073A00B6EB49 /* NetworkService.swift in Sources */,
+				CDDADA432119994C00A013C5 /* SRNetworkTask.swift in Sources */,
 				CDA20D512115D01900B6EB49 /* SRNetworkTests.swift in Sources */,
 				CD3812C42118C42B00370002 /* SRNetworkOperation.swift in Sources */,
+				CDDADA4B2119B68100A013C5 /* SRNetworkConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
