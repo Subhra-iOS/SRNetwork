@@ -41,6 +41,8 @@
 		CDDADA472119ADF600A013C5 /* SRNetworkJsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA452119ADF600A013C5 /* SRNetworkJsonParser.swift */; };
 		CDDADA4A2119B68100A013C5 /* SRNetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA492119B68100A013C5 /* SRNetworkConstant.swift */; };
 		CDDADA4B2119B68100A013C5 /* SRNetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA492119B68100A013C5 /* SRNetworkConstant.swift */; };
+		CDDADA4E2119BFEC00A013C5 /* SRNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA4D2119BFEC00A013C5 /* SRNetworkRequest.swift */; };
+		CDDADA4F2119BFEC00A013C5 /* SRNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA4D2119BFEC00A013C5 /* SRNetworkRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,7 @@
 		CDDADA412119994C00A013C5 /* SRNetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkTask.swift; sourceTree = "<group>"; };
 		CDDADA452119ADF600A013C5 /* SRNetworkJsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkJsonParser.swift; sourceTree = "<group>"; };
 		CDDADA492119B68100A013C5 /* SRNetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkConstant.swift; sourceTree = "<group>"; };
+		CDDADA4D2119BFEC00A013C5 /* SRNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +198,7 @@
 		CDA20D6A2116066400B6EB49 /* SRNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				CDDADA4C2119BFCA00A013C5 /* SRNetworkRequest */,
 				CDDADA482119B65F00A013C5 /* SRNetworkConstant */,
 				CDDADA442119ADAD00A013C5 /* SRNetworkJsonParser */,
 				CDDADA402119991200A013C5 /* SRNetworkTask */,
@@ -250,6 +254,14 @@
 				CDDADA492119B68100A013C5 /* SRNetworkConstant.swift */,
 			);
 			path = SRNetworkConstant;
+			sourceTree = "<group>";
+		};
+		CDDADA4C2119BFCA00A013C5 /* SRNetworkRequest */ = {
+			isa = PBXGroup;
+			children = (
+				CDDADA4D2119BFEC00A013C5 /* SRNetworkRequest.swift */,
+			);
+			path = SRNetworkRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +406,7 @@
 				CDA20D3B2115D00C00B6EB49 /* ViewController.swift in Sources */,
 				CDDADA462119ADF600A013C5 /* SRNetworkJsonParser.swift in Sources */,
 				CDA20D73211606D400B6EB49 /* URLParameterEncoding.swift in Sources */,
+				CDDADA4E2119BFEC00A013C5 /* SRNetworkRequest.swift in Sources */,
 				CDDADA4A2119B68100A013C5 /* SRNetworkConstant.swift in Sources */,
 				CDA20D832116073A00B6EB49 /* HTTPTask.swift in Sources */,
 				CDA20D392115D00C00B6EB49 /* AppDelegate.swift in Sources */,
@@ -420,6 +433,7 @@
 				CDA20D512115D01900B6EB49 /* SRNetworkTests.swift in Sources */,
 				CD3812C42118C42B00370002 /* SRNetworkOperation.swift in Sources */,
 				CDDADA4B2119B68100A013C5 /* SRNetworkConstant.swift in Sources */,
+				CDDADA4F2119BFEC00A013C5 /* SRNetworkRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
