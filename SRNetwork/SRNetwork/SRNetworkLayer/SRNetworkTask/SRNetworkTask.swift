@@ -17,8 +17,9 @@ enum NetworkTaskStatus<T>{
 
 class SRNetworkTask: SRNetworkOperation {
 	
-	convenience   init( _ taskIdentifier  : String , ) {
+	convenience   init( method : HTTPMethod, baseURL : String , urlPath : String, urlHeaders : [String : Any] , parameters : [String : Any] ) {
 		
+		let taskIdentifier : String = SRNetworkConstant.uniqueTaskIdentifier()
 		self.init(taskIdentifier)
 	}
 	

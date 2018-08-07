@@ -31,4 +31,14 @@ struct SRNetworkConstant {
 		return url
 	}
 	
+	static func uniqueTaskIdentifier() -> String {
+		
+		let timeIntervalToday: TimeInterval = Date().timeIntervalSince1970
+		let taskIdentitfier : Int64 = Int64(timeIntervalToday * 100000)
+		
+		let  taskIdentitfierInString : String = String(taskIdentitfier)
+		return  taskIdentitfierInString
+		
+	}
+	
 }
