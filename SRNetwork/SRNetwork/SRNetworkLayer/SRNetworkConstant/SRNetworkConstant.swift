@@ -17,6 +17,7 @@ enum NetworkEnvironment {
 struct SRNetworkConstant {
 	
 	static  let  environment = NetworkEnvironment.staging
+	static  let  maxConcurrentOperation = 4
 	
 	var environmentBaseURL : String {
 		switch SRNetworkConstant.environment {

@@ -12,7 +12,6 @@ class SRNetworkOperation : Operation {
 	
 	public var taskIdentifier : String?
 	
-	
 	override  init() {
 		
 	}

@@ -36,7 +36,7 @@ final class SRNetworkManager : NSObject,URLSessionDelegate{
 	
 	override private init(){
 		
-		self.operationQueue.maxConcurrentOperationCount = 4
+		self.operationQueue.maxConcurrentOperationCount = SRNetworkConstant.maxConcurrentOperation
 		self.operationQueue.name = "SRNetworkOperation"
 	}
 	
@@ -234,10 +234,10 @@ extension  SRNetworkManager: URLSessionDataDelegate,URLSessionDownloadDelegate{
 					
 				}catch DataErrorType.inValidJSON{
 					
-					
+					self.networkTaskDelegate?.taskDidFail(task: task, taskStatus: .fail, error: .failure(NetworkResponse.failed.rawValue))
 				}catch{
 					
-					
+					self.networkTaskDelegate?.taskDidFail(task: task, taskStatus: .fail, error: .failure(NetworkResponse.failed.rawValue))
 				}
 				
 			}
@@ -245,16 +245,6 @@ extension  SRNetworkManager: URLSessionDataDelegate,URLSessionDownloadDelegate{
 		}
 		
 	}
-	
-	func urlSession(_ session: URLSession, didBecomeInvalidWithError error: Error?){
 		
-		print("Session to invalidate : \(session)")
-		
-	}
-	/*func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession){
-		
-		print("Session to invalidate : \(session)")
-	}*/
-	
 }
 

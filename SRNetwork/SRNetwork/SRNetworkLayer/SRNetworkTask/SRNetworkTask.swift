@@ -68,6 +68,10 @@ class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
 		}
 	}
 	
+	deinit {
+		print("Network Dealloc")
+	}
+	
 }
 
 extension  SRNetworkTask : EndPointType{

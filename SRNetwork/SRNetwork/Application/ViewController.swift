@@ -24,14 +24,14 @@ class ViewController: UIViewController {
 
 	func  login() -> Void{
 		
-		let baseUrl = "http://77.104.169.151/~garmentexchange/index.php"
-		let urlPath =   "r=api/Login"  //"%@?r=api/Login"
+		let baseUrl = "http://77.104.169.151/~garmentexchange/index.php?r=api/Login"
+		let urlPath =   ""  //"%@?r=api/Login"
 		
 		let param : [String : Any] = ["login[username]" : "tedder1" , "login[password]" : "123456" , "os" : "ios", "token" : ""]
 		
 		guard let url : URL = URL(string: baseUrl) else { return }
 		
-		let  operationTask : SRNetworkTask = SRNetworkTask(method: .post, baseURL: url, urlPath: urlPath, encoding: ParameterEncoding.urlEncoding, urlHeaders: nil, parameters: param, urlParameter: param, _taskType: NetworkTaskType.dataTask) { (responseData, result) in
+		let  operationTask : SRNetworkTask = SRNetworkTask(method: .post, baseURL: url, urlPath: urlPath, encoding: ParameterEncoding.urlAndJsonEncoding, urlHeaders: nil, parameters: param, urlParameter: param, _taskType: NetworkTaskType.dataTask) { (responseData, result) in
 			
 			let success = result.localizedDescription
 			print("\(success)")
