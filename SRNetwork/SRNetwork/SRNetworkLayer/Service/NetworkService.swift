@@ -89,7 +89,7 @@ class NetworkService<EndPoint: EndPointType>: NetworkRouter {
     fileprivate func addAdditionalHeaders(_ additionalHeaders: HTTPHeaders?, request: inout URLRequest) {
         guard let headers = additionalHeaders else { return }
         for (key, value) in headers {
-            request.setValue(value, forHTTPHeaderField: key)
+			request.setValue(value as? String, forHTTPHeaderField: key)
         }
     }
     

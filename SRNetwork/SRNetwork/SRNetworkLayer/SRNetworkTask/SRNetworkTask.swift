@@ -15,6 +15,8 @@ enum NetworkTaskStatus<T>{
 	case fail
 }
 
+typealias CompletionBlock = (_ data : Any, _ status : Result<String>) -> Void
+
 class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
 	
 	internal  var method : HTTPMethod = .get
@@ -26,13 +28,16 @@ class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
 	private var  urlParam : [String : Any]?
 	private var taskType : NetworkTaskType = NetworkTaskType.dataTask
 	
-	convenience   init( method : HTTPMethod, baseURL : URL , urlPath : String, encoding : ParameterEncoding, urlHeaders : [String : Any]? = nil , parameters : [String : Any]? = nil,urlParameter : [String : Any]? = nil, _taskType : NetworkTaskType.dataTask) {
+	private  var completionHandler : CompletionBlock?
+	
+	convenience   init( method : HTTPMethod, baseURL : URL , urlPath : String, encoding : ParameterEncoding, urlHeaders : HTTPHeaders? = nil , parameters : [String : Any]? = nil,urlParameter : [String : Any]? = nil, _taskType : NetworkTaskType = .dataTask, closure : @escaping CompletionBlock) {
+		
+		self.init()
 		
 		let taskIdentifier : String = SRNetworkConstant.uniqueTaskIdentifier()
-		self.init(taskIdentifier)
-		super.init(_taskIdentifier: taskIdentifier)
 		
-		self.httpMethod = method
+		self.taskIdentifier = taskIdentifier
+		self.method = method
 		self.environmentBaseUrl = baseURL
 		self.urlpath = urlPath
 		self.headers = urlHeaders
@@ -40,11 +45,12 @@ class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
 		self.encodeType = encoding
 		self.urlParam = urlParameter
 		self.taskType = _taskType
+		
+		self.completionHandler = closure
 	}
 	
-	private init( _ taskIdentifier  : String) {
-		
-		
+	override  init() {
+		super.init()
 	}
 	
 	override  func start() {
@@ -54,27 +60,24 @@ class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
 		shared.networkTaskType = self.taskType
 		shared.dataTaskRequest =  self.createRequest()
 		do{
-			shared.start()
-		}catch Result.failure(NetworkResponse.badRequest){
+			try shared.start()
+		}catch {
 			
 			print("\(NetworkResponse.badRequest)")
 			
-		}catch{
-			
 		}
 	}
-
 	
 }
 
 extension  SRNetworkTask : EndPointType{
 	
 	var baseURL: URL {
-		return  self.environmentBaseUrl
+		return  self.environmentBaseUrl!
 	}
 	
 	var path: String {
-		return  self.urlpath
+		return  self.urlpath!
 	}
 	
 	var httpMethod: HTTPMethod {
@@ -89,7 +92,7 @@ extension  SRNetworkTask : EndPointType{
 				
 				if let header = self.headers {
 					
-					return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: self.urlParam, additionHeaders: header as! HTTPHeaders)
+					return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: self.urlParam, additionHeaders: header)
 				}else{
 					
 					return .requestParameters(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: self.urlParam)
@@ -99,7 +102,7 @@ extension  SRNetworkTask : EndPointType{
 				
 				if let header = self.headers {
 					
-					return .requestParametersAndHeaders(bodyParameters: self.httpBodyParam, bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: header as! HTTPHeaders)
+					return .requestParametersAndHeaders(bodyParameters: self.httpBodyParam, bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: header)
 					
 				}else{
 					
@@ -109,7 +112,7 @@ extension  SRNetworkTask : EndPointType{
 			default:
 				if let header = self.headers {
 					
-					return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: self.urlParam, additionHeaders: header as! HTTPHeaders)
+					return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: self.urlParam, additionHeaders: header )
 				}else{
 					
 					return .requestParameters(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: self.urlParam)
@@ -123,7 +126,7 @@ extension  SRNetworkTask : EndPointType{
 		
 		do{
 			
-			let request =  try SRNetworkRequest().buildRequest(baseURL: self.environmentBaseUrl, path: self.urlpath, httpMethod: self.httpMethod, task: task)
+			let request =  try SRNetworkRequest().buildRequest(baseURL: self.baseURL, path: self.path, httpMethod: self.httpMethod, task: task)
 
 				return  request
 		}catch{
@@ -137,17 +140,25 @@ extension  SRNetworkTask {
 	
 	func taskDidStart(task : URLSessionTask, taskStatus : NetworkTaskStatus<Int64>, result : Result<String>){
 		
+		print("\(result)")
 		
 	}
 	
 	func taskDidFinish(task : URLSessionTask, taskStatus : NetworkTaskStatus<Int64>, data : Any, result : Result<String>){
 		
+			let  resultDict : [String : Any] = data as!  [String : Any]
+			print("\(resultDict)")
 		
+			self.completeOpeartion()
+			self.completionHandler?(resultDict, result)
 	}
 	
 	func taskDidFail(task : URLSessionTask, taskStatus : NetworkTaskStatus<Int64>, error : Result<String>){
 		
+		print("\(error)")
 		
+		self.completeOpeartion()
+		self.completionHandler?( [:] , error)
 	}
 	
 	func taskDidWriteData(task : URLSessionTask, taskStatus : NetworkTaskStatus<Int64>,  progress : Float){

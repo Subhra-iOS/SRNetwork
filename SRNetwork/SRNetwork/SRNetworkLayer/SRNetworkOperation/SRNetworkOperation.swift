@@ -12,13 +12,8 @@ class SRNetworkOperation : Operation {
 	
 	public var taskIdentifier : String?
 	
-	convenience  init(_taskIdentifier : String ){
-		self.init()
-		self.taskIdentifier = _taskIdentifier
 	
-	}
-	
-	override private init() {
+	override  init() {
 		
 	}
 	
@@ -88,5 +83,6 @@ class SRNetworkOperation : Operation {
 	override func main() {
 		self.resumeOperation()
 	}
+	
 	
 }

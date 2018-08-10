@@ -32,8 +32,12 @@ final class SRNetworkManager : NSObject,URLSessionDelegate{
 	
 	private  var  responseData : Data?
 	
+	var  operationQueue : OperationQueue = OperationQueue()
+	
 	override private init(){
 		
+		self.operationQueue.maxConcurrentOperationCount = 4
+		self.operationQueue.name = "SRNetworkOperation"
 	}
 	
 	lazy  var sharedSession : URLSession? = {
@@ -46,6 +50,9 @@ final class SRNetworkManager : NSObject,URLSessionDelegate{
 	func start() throws -> Void{
 		
 		if let currentSession : URLSession = self.sharedSession, let request = dataTaskRequest {
+			
+			print("\(String(describing: request.url))")
+			print("\(String(describing: request.allHTTPHeaderFields))")
 			
 			self.responseData = Data()
 			self.sharedSessionTask = currentSession.dataTask(with: request)
@@ -72,6 +79,15 @@ final class SRNetworkManager : NSObject,URLSessionDelegate{
 		
 	}
 	
+	private func finishTask() -> Void{
+		
+		if let session  : URLSessionTask = self.sharedSessionTask{
+			
+			session.cancel()
+		}
+		
+	}
+	
 	deinit {
 		print("Service Manager Dealloc")
 	}
@@ -85,6 +101,7 @@ extension  SRNetworkManager: URLSessionDataDelegate,URLSessionDownloadDelegate{
 		
 		if(dataTask.state == URLSessionTask.State.canceling) {
 			
+			self.finishTask()
 			completionHandler(.cancel)
 			return
 			
@@ -114,6 +131,7 @@ extension  SRNetworkManager: URLSessionDataDelegate,URLSessionDownloadDelegate{
 						
 					}else if statusCode >= 400{
 						
+						self.finishTask()
 						self.networkTaskDelegate?.taskDidFail(task: dataTask, taskStatus: .fail, error: NetworkLog.handleNetworkResponse(urlResponse))
 						
 						completionHandler(.cancel)
@@ -122,7 +140,7 @@ extension  SRNetworkManager: URLSessionDataDelegate,URLSessionDownloadDelegate{
 				}
 				
 			}else{
-				
+				self.finishTask()
 				completionHandler(.cancel)
 			}
 			
@@ -168,6 +186,7 @@ extension  SRNetworkManager: URLSessionDataDelegate,URLSessionDownloadDelegate{
 			return
 		}
 		
+			self.finishTask()
 		do{
 			let data : Data = try Data(contentsOf: location)
 			self.networkTaskDelegate?.taskDidFinish(task: downloadTask, taskStatus: .end, data: data, result: .success)
@@ -198,9 +217,13 @@ extension  SRNetworkManager: URLSessionDataDelegate,URLSessionDownloadDelegate{
 		
 		if let errorInfo = error{
 			print("Session error: \(errorInfo.localizedDescription)")
+			self.finishTask()
 			self.networkTaskDelegate?.taskDidFail(task: task, taskStatus: .fail, error: .failure(NetworkResponse.failed.rawValue))
+			
 		}
 		else{
+			
+			self.finishTask()
 			
 			if let data : Data = self.responseData{
 				
