@@ -24,9 +24,9 @@ class ViewController: UIViewController {
 	
 	func  login() -> Void{
 		
-		let baseUrl = "http://77.104.169.151/~garmentexchange/index.php?r=api/Login"
+		let baseUrl = "https://api/Login"
 		
-		let param : [String : AnyObject] = ["login[username]" : "tedder1" , "login[password]" : "123456" , "os" : "ios"]  as [String : AnyObject]
+		let param : [String : AnyObject] = ["login[username]" : "xyz" , "login[password]" : "123456" , "os" : "ios"]  as [String : AnyObject]
 		
 		let  operationTask : SRNetworkTask = SRNetworkTask(method: .post, serviceURL: baseUrl, encoding: .url, urlHeaders: nil, parameters: param, _taskType: NetworkTaskType.dataTask, closure: { (responseData, result) in
 			
