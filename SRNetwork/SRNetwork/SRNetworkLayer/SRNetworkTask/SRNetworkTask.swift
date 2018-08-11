@@ -64,6 +64,20 @@ class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
 		}
 	}
 	
+	override func completeOpeartion() -> Void{
+		
+		super.completeOpeartion()
+		let shared : SRNetworkManager = SRNetworkManager.sharedManager
+		shared.cancelSession()
+	}
+	
+	func enqueueOperation() -> Void{
+		
+		let shared : SRNetworkManager = SRNetworkManager.sharedManager
+		shared.operationQueue.addOperation(self)
+
+	}
+	
 	deinit {
 		print("Network Dealloc")
 	}
@@ -79,44 +93,6 @@ extension  SRNetworkTask : EndPointType{
 	var httpMethod: HTTPMethod {
 		return  self.method
 	}
-	
-	
-	/*var task: HTTPTask {
-		
-		switch encodeType {
-			case .urlEncoding:
-				
-				if let header = self.headers {
-					
-					return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: self.urlParam, additionHeaders: header)
-				}else{
-					
-					return .requestParameters(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: self.urlParam)
-				}
-				
-			case .jsonEncoding:
-				
-				if let header = self.headers {
-					
-					return .requestParametersAndHeaders(bodyParameters: self.httpBodyParam, bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: header)
-					
-				}else{
-					
-				   return .requestParameters(bodyParameters: self.httpBodyParam, bodyEncoding: .jsonEncoding, urlParameters: nil)
-			    }
-			
-			default:
-				if let header = self.headers {
-					
-					return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: self.urlParam, additionHeaders: header )
-				}else{
-					
-					return .requestParameters(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: self.urlParam)
-			}
-			
-		}
-		
-	}*/
 	
 	func createRequest() -> URLRequest?{
 		
