@@ -8,11 +8,11 @@
 
 import Foundation
 
+public typealias HTTPHeaders = [String : String]
+public typealias HTTPParameter = [String : AnyObject]
+
 protocol EndPointType {
-    var baseURL: URL { get }
-    var path: String { get }
+    var serviceURL: String { get }
     var httpMethod: HTTPMethod { get }
-    var task: HTTPTask { get }
-    //var headers: HTTPHeaders? { get }
 }
 

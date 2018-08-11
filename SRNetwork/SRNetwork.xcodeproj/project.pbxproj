@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD2EF27E211EC72100FF44E4 /* SRParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2EF27D211EC72100FF44E4 /* SRParameterEncoding.swift */; };
+		CD2EF27F211EC72200FF44E4 /* SRParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2EF27D211EC72100FF44E4 /* SRParameterEncoding.swift */; };
 		CD3812C32118C42B00370002 /* SRNetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C22118C42B00370002 /* SRNetworkOperation.swift */; };
 		CD3812C42118C42B00370002 /* SRNetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C22118C42B00370002 /* SRNetworkOperation.swift */; };
 		CD3812C62118C44100370002 /* SRNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C52118C44100370002 /* SRNetworkManager.swift */; };
@@ -63,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD2EF27D211EC72100FF44E4 /* SRParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRParameterEncoding.swift; sourceTree = "<group>"; };
 		CD3812C22118C42B00370002 /* SRNetworkOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkOperation.swift; sourceTree = "<group>"; };
 		CD3812C52118C44100370002 /* SRNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkManager.swift; sourceTree = "<group>"; };
 		CDA20D352115D00C00B6EB49 /* SRNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +219,7 @@
 				CDA20D6C211606D400B6EB49 /* JSONParameterEncoder.swift */,
 				CDA20D6D211606D400B6EB49 /* ParameterEncoding.swift */,
 				CDA20D6E211606D400B6EB49 /* URLParameterEncoding.swift */,
+				CD2EF27D211EC72100FF44E4 /* SRParameterEncoding.swift */,
 			);
 			path = Encoding;
 			sourceTree = "<group>";
@@ -396,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDA20D862116089700B6EB49 /* NetworkLog.swift in Sources */,
+				CD2EF27E211EC72100FF44E4 /* SRParameterEncoding.swift in Sources */,
 				CDDADA422119994C00A013C5 /* SRNetworkTask.swift in Sources */,
 				CDA20D7D2116073A00B6EB49 /* NetworkService.swift in Sources */,
 				CDA20D6F211606D400B6EB49 /* JSONParameterEncoder.swift in Sources */,
@@ -420,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDA20D872116089700B6EB49 /* NetworkLog.swift in Sources */,
+				CD2EF27F211EC72200FF44E4 /* SRParameterEncoding.swift in Sources */,
 				CDA20D74211606D400B6EB49 /* URLParameterEncoding.swift in Sources */,
 				CDDADA472119ADF600A013C5 /* SRNetworkJsonParser.swift in Sources */,
 				CDA20D72211606D400B6EB49 /* ParameterEncoding.swift in Sources */,

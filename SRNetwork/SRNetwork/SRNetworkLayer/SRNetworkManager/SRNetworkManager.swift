@@ -53,6 +53,8 @@ final class SRNetworkManager : NSObject,URLSessionDelegate{
 			
 			print("\(String(describing: request.url))")
 			print("\(String(describing: request.allHTTPHeaderFields))")
+			print("\(String(describing: request.httpBody))")
+			print("\(String(describing: String(data: request.httpBody!, encoding: .utf8)))")
 			
 			self.responseData = Data()
 			self.sharedSessionTask = currentSession.dataTask(with: request)

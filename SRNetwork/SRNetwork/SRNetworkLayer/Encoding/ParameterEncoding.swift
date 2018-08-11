@@ -8,7 +8,7 @@
 
 import Foundation
 
-public typealias Parameters = [String:Any]
+/*public typealias Parameters = [String:Any]
 
 public protocol ParameterEncoder {
     func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws
@@ -45,7 +45,7 @@ public enum ParameterEncoding {
         }
     }
 }
-
+*/
 
 public enum NetworkError : String, Error {
     case parametersNil = "Parameters were nil."

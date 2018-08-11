@@ -8,13 +8,13 @@
 
 import Foundation
 
-public struct URLParameterEncoder: ParameterEncoder {
+/*public struct URLParameterEncoder: ParameterEncoder {
     public func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
         
         guard let url = urlRequest.url else { throw NetworkError.missingURL }
         
         if var urlComponents = URLComponents(url: url,
-                                             resolvingAgainstBaseURL: false), !parameters.isEmpty {
+                                             resolvingAgainstBaseURL: true), !parameters.isEmpty {
             
             urlComponents.queryItems = [URLQueryItem]()
             
@@ -23,12 +23,19 @@ public struct URLParameterEncoder: ParameterEncoder {
                                              value: "\(value)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed))
                 urlComponents.queryItems?.append(queryItem)
             }
+			
+			print("\(String(describing: urlComponents.queryItems))")
+			
             urlRequest.url = urlComponents.url
         }
         
         if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
             urlRequest.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
         }
-        
+	 //"Accept-Language"
+		
+		print("\(String(describing: urlRequest.url))")
+		print("\(String(describing: urlRequest.allHTTPHeaderFields))")
+		
     }
-}
+}*/

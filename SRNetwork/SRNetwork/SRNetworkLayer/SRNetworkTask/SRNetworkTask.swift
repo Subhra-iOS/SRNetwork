@@ -20,17 +20,15 @@ typealias CompletionBlock = (_ data : Any, _ status : Result<String>) -> Void
 class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
 	
 	internal  var method : HTTPMethod = .get
-	private  var environmentBaseUrl : URL?
-	private  var urlpath : String?
-	private  var headers : [String : Any]?
-	private  var httpBodyParam : [String : Any]?
-	private  var encodeType : ParameterEncoding = .urlEncoding
-	private var  urlParam : [String : Any]?
+	private  var requestURL : String?
+	private  var headers : HTTPHeaders?
+	private  var httpParam : HTTPParameter?
+	private  var encodeType : ParameterEncoding = .url
 	private var taskType : NetworkTaskType = NetworkTaskType.dataTask
 	
 	private  var completionHandler : CompletionBlock?
 	
-	convenience   init( method : HTTPMethod, baseURL : URL , urlPath : String, encoding : ParameterEncoding, urlHeaders : HTTPHeaders? = nil , parameters : [String : Any]? = nil,urlParameter : [String : Any]? = nil, _taskType : NetworkTaskType = .dataTask, closure : @escaping CompletionBlock) {
+	convenience   init( method : HTTPMethod, serviceURL : String , encoding : ParameterEncoding, urlHeaders : HTTPHeaders? = nil , parameters : HTTPParameter? = nil, _taskType : NetworkTaskType = .dataTask, closure : @escaping CompletionBlock) {
 		
 		self.init()
 		
@@ -38,12 +36,10 @@ class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
 		
 		self.taskIdentifier = taskIdentifier
 		self.method = method
-		self.environmentBaseUrl = baseURL
-		self.urlpath = urlPath
+		self.requestURL = serviceURL
 		self.headers = urlHeaders
-		self.httpBodyParam = parameters
+		self.httpParam = parameters
 		self.encodeType = encoding
-		self.urlParam = urlParameter
 		self.taskType = _taskType
 		
 		self.completionHandler = closure
@@ -76,12 +72,8 @@ class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
 
 extension  SRNetworkTask : EndPointType{
 	
-	var baseURL: URL {
-		return  self.environmentBaseUrl!
-	}
-	
-	var path: String {
-		return  self.urlpath!
+	var serviceURL: String {
+		return  self.requestURL!
 	}
 	
 	var httpMethod: HTTPMethod {
@@ -89,7 +81,7 @@ extension  SRNetworkTask : EndPointType{
 	}
 	
 	
-	var task: HTTPTask {
+	/*var task: HTTPTask {
 		
 		switch encodeType {
 			case .urlEncoding:
@@ -124,18 +116,15 @@ extension  SRNetworkTask : EndPointType{
 			
 		}
 		
-	}
+	}*/
 	
 	func createRequest() -> URLRequest?{
 		
-		do{
-			
-			let request =  try SRNetworkRequest().buildRequest(baseURL: self.baseURL, path: self.path, httpMethod: self.httpMethod, task: task)
+		let request = SRNetworkRequest().buildRequest(self.method, URLString: self.serviceURL, parameters: self.httpParam, encoding: self.encodeType, headers: self.headers)
 
-				return  request
-		}catch{
-			return nil
-		}
+		print("\(String(describing: request.url))")
+		
+		return  request
 	}
 	
 }

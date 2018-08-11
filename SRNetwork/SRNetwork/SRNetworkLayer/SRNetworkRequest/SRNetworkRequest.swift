@@ -10,11 +10,20 @@ import Foundation
 
 struct SRNetworkRequest {
 	
-	func buildRequest(baseURL : URL, path : String, httpMethod : HTTPMethod, task : HTTPTask) throws -> URLRequest {
+	/*func buildRequest(baseURL : URL, path : String, httpMethod : HTTPMethod, task : HTTPTask) throws -> URLRequest {
 		
-		var request = URLRequest(url: baseURL.appendingPathComponent(path),
+		var url : URL?
+		if path.count > 0{
+			
+			url = baseURL.appendingPathComponent(path)
+		}else{
+			
+			url = baseURL
+		}
+		
+		var request = URLRequest(url: url!,
 								 cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
-								 timeoutInterval: 10.0)
+								 timeoutInterval: 60.0)
 		
 		request.httpMethod = httpMethod.rawValue
 		do {
@@ -64,6 +73,27 @@ struct SRNetworkRequest {
 		for (key, value) in headers {
 			request.setValue(value as? String, forHTTPHeaderField: key)
 		}
+	}*/
+	
+	func buildRequest(_ method: HTTPMethod, URLString: URLStringConvertible, parameters: [String: AnyObject]? = nil, encoding: ParameterEncoding = .url, headers: [String: String]? = nil) -> URLRequest{
+		
+		let mutableURLRequest = urlRequest(method, URLString: URLString, headers: headers)
+		let encodedURLRequest = encoding.encode(mutableURLRequest as URLRequestConvertible, parameters: parameters).0
+		return encodedURLRequest.URLRequest
+	}
+	
+	private func urlRequest(_ method: HTTPMethod, URLString: URLStringConvertible, headers: [String: String]? = nil) -> URLRequest{
+		
+		var mutableURLRequest: URLRequest = URLRequest(url: URL(string: URLString.URLString)!)
+		
+		mutableURLRequest.httpMethod = method.rawValue
+		
+		if let headers = headers {
+			for (headerField, headerValue) in headers {
+				mutableURLRequest.setValue(headerValue, forHTTPHeaderField: headerField)
+			}
+		}
+		return mutableURLRequest
 	}
 	
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public typealias HTTPHeaders = [String : Any]
+/*public typealias HTTPHeaders = [String : Any]
 
 public enum HTTPTask {
     case request
@@ -23,5 +23,5 @@ public enum HTTPTask {
         additionHeaders: HTTPHeaders?)
     
 }
-
+*/
 
