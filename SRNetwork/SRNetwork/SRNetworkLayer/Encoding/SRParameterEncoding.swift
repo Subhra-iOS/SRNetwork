@@ -8,9 +8,9 @@
 
 import Foundation
 
-public enum MethodType: String {
-	case  GET, POST, PUT, DELETE
-}
+//public enum MethodType: String {
+//	case  GET, POST, PUT, DELETE
+//}
 // MARK: URLStringConvertible Protocol
 public protocol URLStringConvertible {
 	var URLString: String { get }
@@ -77,7 +77,7 @@ public enum ParameterEncoding {
 				return (components.map { "\($0)=\($1)" } as [String]).joined(separator: "&")
 			}
 			
-			func encodesParametersInURL(_ method: MethodType) -> Bool {
+			func encodesParametersInURL(_ method: HTTPMethod) -> Bool {
 				switch self {
 				case .urlEncodedInURL:
 					return true
@@ -86,14 +86,14 @@ public enum ParameterEncoding {
 				}
 				
 				switch method {
-				case .GET, .DELETE:
+				case .get, .delete:
 					return true
 				default:
 					return false
 				}
 			}
 			
-			if let method = MethodType(rawValue: mutableURLRequest.httpMethod!) , encodesParametersInURL(method) {
+			if let method = HTTPMethod(rawValue: mutableURLRequest.httpMethod!) , encodesParametersInURL(method) {
 				if var URLComponents = URLComponents(url: mutableURLRequest.url!, resolvingAgainstBaseURL: false) {
 					let percentEncodedQuery = (URLComponents.percentEncodedQuery.map { $0 + "&" } ?? "") + query(parameters)
 					URLComponents.percentEncodedQuery = percentEncodedQuery

@@ -21,20 +21,10 @@
 		CDA20D462115D01900B6EB49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA20D442115D01900B6EB49 /* LaunchScreen.storyboard */; };
 		CDA20D512115D01900B6EB49 /* SRNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D502115D01900B6EB49 /* SRNetworkTests.swift */; };
 		CDA20D5C2115D01900B6EB49 /* SRNetworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D5B2115D01900B6EB49 /* SRNetworkUITests.swift */; };
-		CDA20D6F211606D400B6EB49 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D6C211606D400B6EB49 /* JSONParameterEncoder.swift */; };
-		CDA20D70211606D400B6EB49 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D6C211606D400B6EB49 /* JSONParameterEncoder.swift */; };
-		CDA20D71211606D400B6EB49 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D6D211606D400B6EB49 /* ParameterEncoding.swift */; };
-		CDA20D72211606D400B6EB49 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D6D211606D400B6EB49 /* ParameterEncoding.swift */; };
-		CDA20D73211606D400B6EB49 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D6E211606D400B6EB49 /* URLParameterEncoding.swift */; };
-		CDA20D74211606D400B6EB49 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D6E211606D400B6EB49 /* URLParameterEncoding.swift */; };
 		CDA20D772116072300B6EB49 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D762116072300B6EB49 /* EndPointType.swift */; };
 		CDA20D782116072300B6EB49 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D762116072300B6EB49 /* EndPointType.swift */; };
-		CDA20D7D2116073A00B6EB49 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D792116073A00B6EB49 /* NetworkService.swift */; };
-		CDA20D7E2116073A00B6EB49 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D792116073A00B6EB49 /* NetworkService.swift */; };
 		CDA20D812116073A00B6EB49 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D7B2116073A00B6EB49 /* HTTPMethod.swift */; };
 		CDA20D822116073A00B6EB49 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D7B2116073A00B6EB49 /* HTTPMethod.swift */; };
-		CDA20D832116073A00B6EB49 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D7C2116073A00B6EB49 /* HTTPTask.swift */; };
-		CDA20D842116073A00B6EB49 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D7C2116073A00B6EB49 /* HTTPTask.swift */; };
 		CDA20D862116089700B6EB49 /* NetworkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D852116089700B6EB49 /* NetworkLog.swift */; };
 		CDA20D872116089700B6EB49 /* NetworkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D852116089700B6EB49 /* NetworkLog.swift */; };
 		CDDADA422119994C00A013C5 /* SRNetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA412119994C00A013C5 /* SRNetworkTask.swift */; };
@@ -82,13 +72,8 @@
 		CDA20D572115D01900B6EB49 /* SRNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SRNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA20D5B2115D01900B6EB49 /* SRNetworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkUITests.swift; sourceTree = "<group>"; };
 		CDA20D5D2115D01900B6EB49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDA20D6C211606D400B6EB49 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
-		CDA20D6D211606D400B6EB49 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
-		CDA20D6E211606D400B6EB49 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
 		CDA20D762116072300B6EB49 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
-		CDA20D792116073A00B6EB49 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CDA20D7B2116073A00B6EB49 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		CDA20D7C2116073A00B6EB49 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		CDA20D852116089700B6EB49 /* NetworkLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLog.swift; sourceTree = "<group>"; };
 		CDDADA412119994C00A013C5 /* SRNetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkTask.swift; sourceTree = "<group>"; };
 		CDDADA452119ADF600A013C5 /* SRNetworkJsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkJsonParser.swift; sourceTree = "<group>"; };
@@ -216,9 +201,6 @@
 		CDA20D6B211606B500B6EB49 /* Encoding */ = {
 			isa = PBXGroup;
 			children = (
-				CDA20D6C211606D400B6EB49 /* JSONParameterEncoder.swift */,
-				CDA20D6D211606D400B6EB49 /* ParameterEncoding.swift */,
-				CDA20D6E211606D400B6EB49 /* URLParameterEncoding.swift */,
 				CD2EF27D211EC72100FF44E4 /* SRParameterEncoding.swift */,
 			);
 			path = Encoding;
@@ -230,8 +212,6 @@
 				CDA20D852116089700B6EB49 /* NetworkLog.swift */,
 				CDA20D762116072300B6EB49 /* EndPointType.swift */,
 				CDA20D7B2116073A00B6EB49 /* HTTPMethod.swift */,
-				CDA20D7C2116073A00B6EB49 /* HTTPTask.swift */,
-				CDA20D792116073A00B6EB49 /* NetworkService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -402,18 +382,13 @@
 				CDA20D862116089700B6EB49 /* NetworkLog.swift in Sources */,
 				CD2EF27E211EC72100FF44E4 /* SRParameterEncoding.swift in Sources */,
 				CDDADA422119994C00A013C5 /* SRNetworkTask.swift in Sources */,
-				CDA20D7D2116073A00B6EB49 /* NetworkService.swift in Sources */,
-				CDA20D6F211606D400B6EB49 /* JSONParameterEncoder.swift in Sources */,
 				CD3812C62118C44100370002 /* SRNetworkManager.swift in Sources */,
 				CDA20D412115D00C00B6EB49 /* SRNetwork.xcdatamodeld in Sources */,
-				CDA20D71211606D400B6EB49 /* ParameterEncoding.swift in Sources */,
 				CD3812C32118C42B00370002 /* SRNetworkOperation.swift in Sources */,
 				CDA20D3B2115D00C00B6EB49 /* ViewController.swift in Sources */,
 				CDDADA462119ADF600A013C5 /* SRNetworkJsonParser.swift in Sources */,
-				CDA20D73211606D400B6EB49 /* URLParameterEncoding.swift in Sources */,
 				CDDADA4E2119BFEC00A013C5 /* SRNetworkRequest.swift in Sources */,
 				CDDADA4A2119B68100A013C5 /* SRNetworkConstant.swift in Sources */,
-				CDA20D832116073A00B6EB49 /* HTTPTask.swift in Sources */,
 				CDA20D392115D00C00B6EB49 /* AppDelegate.swift in Sources */,
 				CDA20D812116073A00B6EB49 /* HTTPMethod.swift in Sources */,
 				CDA20D772116072300B6EB49 /* EndPointType.swift in Sources */,
@@ -426,15 +401,10 @@
 			files = (
 				CDA20D872116089700B6EB49 /* NetworkLog.swift in Sources */,
 				CD2EF27F211EC72200FF44E4 /* SRParameterEncoding.swift in Sources */,
-				CDA20D74211606D400B6EB49 /* URLParameterEncoding.swift in Sources */,
 				CDDADA472119ADF600A013C5 /* SRNetworkJsonParser.swift in Sources */,
-				CDA20D72211606D400B6EB49 /* ParameterEncoding.swift in Sources */,
-				CDA20D842116073A00B6EB49 /* HTTPTask.swift in Sources */,
-				CDA20D70211606D400B6EB49 /* JSONParameterEncoder.swift in Sources */,
 				CDA20D822116073A00B6EB49 /* HTTPMethod.swift in Sources */,
 				CDA20D782116072300B6EB49 /* EndPointType.swift in Sources */,
 				CD3812C72118C44100370002 /* SRNetworkManager.swift in Sources */,
-				CDA20D7E2116073A00B6EB49 /* NetworkService.swift in Sources */,
 				CDDADA432119994C00A013C5 /* SRNetworkTask.swift in Sources */,
 				CDA20D512115D01900B6EB49 /* SRNetworkTests.swift in Sources */,
 				CD3812C42118C42B00370002 /* SRNetworkOperation.swift in Sources */,
