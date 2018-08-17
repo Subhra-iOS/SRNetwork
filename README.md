@@ -10,18 +10,22 @@ Code Snippet :
 
 //------------Create operation---------------//
 
-let  operationTask : SRNetworkTask = SRNetworkTask(method: .post, serviceURL: baseUrl, encoding: .url, urlHeaders: nil, parameters: param, _taskType: NetworkTaskType.dataTask, closure: { (responseData, result) in
-			
-			let success = result.localizedDescription
-			print("\(success)")
-			
-			let response : [String : Any]? = responseData as? [String : Any]
-			print("\(String(describing: response))")
-			
-})
+let networkManager : SRNetworkManager = SRNetworkManager.sharedManager
+networkManager.serviceDataTaskManagerWith(httpMethodType: .post, url: baseUrl, headers: nil, encoding: .url, urlParameter: param, networkJobType: .dataTask) { (responseData, result) in
+
+	let success = result.localizedDescription
+	print("\(success)")
+
+	switch result{
+		case Result.success: break
+		case Result.failure(let error) : print("\(error)")
+	}
+
+	let response : [String : Any]? = responseData as? [String : Any]
+	print("\(String(describing: response))")
+}
 		
 //--------------Start operation-----------//    
-operationTask.enqueueOperation() 
 
 
 I hope it will help.
