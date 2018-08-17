@@ -14,6 +14,13 @@ enum NetworkEnvironment {
 	case staging
 }
 
+enum NetworkTaskStatus<T>{
+	case start
+	case inProgress
+	case end
+	case fail
+}
+
 struct SRNetworkConstant {
 	
 	static  let  environment = NetworkEnvironment.staging

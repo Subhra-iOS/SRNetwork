@@ -8,13 +8,6 @@
 
 import Foundation
 
-enum NetworkTaskStatus<T>{
-	case start
-	case inProgress
-	case end
-	case fail
-}
-
 typealias CompletionBlock = (_ data : Any, _ status : Result<String>) -> Void
 
 class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
@@ -28,7 +21,7 @@ class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
 	
 	private  var completionHandler : CompletionBlock?
 	
-	convenience   init( method : HTTPMethod, serviceURL : String , encoding : ParameterEncoding, urlHeaders : HTTPHeaders? = nil , parameters : HTTPParameter? = nil, jobType : NetworkTaskType = .dataTask, closure : @escaping CompletionBlock) {
+	convenience   init( method : HTTPMethod = .get, serviceURL : String , encoding : ParameterEncoding = .url, urlHeaders : HTTPHeaders? = nil , parameters : HTTPParameter? = nil, jobType : NetworkTaskType = .dataTask, closure : @escaping CompletionBlock) {
 		
 		self.init()
 		
@@ -45,7 +38,7 @@ class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
 		self.completionHandler = closure
 	}
 	
-	override  init() {
+	override private init() {
 		super.init()
 	}
 	
@@ -98,6 +91,7 @@ extension  SRNetworkTask : EndPointType{
 	
 }
 
+//MARK:--------SRNetworkManagerProtocol functions-----------//
 extension  SRNetworkTask {
 	
 	func taskDidStart(task : URLSessionTask, taskStatus : NetworkTaskStatus<Int64>, result : Result<String>){

@@ -27,7 +27,7 @@ enum Result<String> : Error{
 enum DataErrorType  : Error {
 	case inValidJSON
 	case nullValue
-
+	case invalidData
 }
 
 class NetworkLog {
