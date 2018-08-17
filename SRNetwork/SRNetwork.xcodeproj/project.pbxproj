@@ -13,6 +13,7 @@
 		CD3812C42118C42B00370002 /* SRNetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C22118C42B00370002 /* SRNetworkOperation.swift */; };
 		CD3812C62118C44100370002 /* SRNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C52118C44100370002 /* SRNetworkManager.swift */; };
 		CD3812C72118C44100370002 /* SRNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3812C52118C44100370002 /* SRNetworkManager.swift */; };
+		CD89019621273B1100041DE6 /* SRNetworkManager+DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD89019521273B1100041DE6 /* SRNetworkManager+DataTask.swift */; };
 		CDA20D392115D00C00B6EB49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D382115D00C00B6EB49 /* AppDelegate.swift */; };
 		CDA20D3B2115D00C00B6EB49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA20D3A2115D00C00B6EB49 /* ViewController.swift */; };
 		CDA20D3E2115D00C00B6EB49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA20D3C2115D00C00B6EB49 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		CD2EF27D211EC72100FF44E4 /* SRParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRParameterEncoding.swift; sourceTree = "<group>"; };
 		CD3812C22118C42B00370002 /* SRNetworkOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkOperation.swift; sourceTree = "<group>"; };
 		CD3812C52118C44100370002 /* SRNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRNetworkManager.swift; sourceTree = "<group>"; };
+		CD89019521273B1100041DE6 /* SRNetworkManager+DataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SRNetworkManager+DataTask.swift"; sourceTree = "<group>"; };
 		CDA20D352115D00C00B6EB49 /* SRNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA20D382115D00C00B6EB49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDA20D3A2115D00C00B6EB49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				CD3812C52118C44100370002 /* SRNetworkManager.swift */,
+				CD89019521273B1100041DE6 /* SRNetworkManager+DataTask.swift */,
 			);
 			path = SRNetworkManager;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				CDDADA462119ADF600A013C5 /* SRNetworkJsonParser.swift in Sources */,
 				CDDADA4E2119BFEC00A013C5 /* SRNetworkRequest.swift in Sources */,
 				CDDADA4A2119B68100A013C5 /* SRNetworkConstant.swift in Sources */,
+				CD89019621273B1100041DE6 /* SRNetworkManager+DataTask.swift in Sources */,
 				CDA20D392115D00C00B6EB49 /* AppDelegate.swift in Sources */,
 				CDA20D812116073A00B6EB49 /* HTTPMethod.swift in Sources */,
 				CDA20D772116072300B6EB49 /* EndPointType.swift in Sources */,

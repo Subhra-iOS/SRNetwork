@@ -28,17 +28,21 @@ class ViewController: UIViewController {
 		
 		let param : [String : AnyObject] = ["login[username]" : "xyz" , "login[password]" : "123456" , "os" : "ios"]  as [String : AnyObject]
 		
-		let  operationTask : SRNetworkTask = SRNetworkTask(method: .post, serviceURL: baseUrl, encoding: .url, urlHeaders: nil, parameters: param, _taskType: NetworkTaskType.dataTask, closure: { (responseData, result) in
+		let networkManager : SRNetworkManager = SRNetworkManager.sharedManager
+		networkManager.serviceDataTaskManagerWith(httpMethodType: .post, url: baseUrl, headers: nil, encoding: .url, urlParameter: param, networkJobType: .dataTask) { (responseData, result) in
 			
 			let success = result.localizedDescription
 			print("\(success)")
 			
+			switch result{
+				case Result.success: break
+				case Result.failure(let error) : print("\(error)")
+			}
+			
 			let response : [String : Any]? = responseData as? [String : Any]
 			print("\(String(describing: response))")
-			
-		})
+		}
 		
-		operationTask.enqueueOperation()
 	}
 	
 

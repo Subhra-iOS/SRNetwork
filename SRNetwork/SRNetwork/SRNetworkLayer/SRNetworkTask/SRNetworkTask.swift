@@ -28,7 +28,7 @@ class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
 	
 	private  var completionHandler : CompletionBlock?
 	
-	convenience   init( method : HTTPMethod, serviceURL : String , encoding : ParameterEncoding, urlHeaders : HTTPHeaders? = nil , parameters : HTTPParameter? = nil, _taskType : NetworkTaskType = .dataTask, closure : @escaping CompletionBlock) {
+	convenience   init( method : HTTPMethod, serviceURL : String , encoding : ParameterEncoding, urlHeaders : HTTPHeaders? = nil , parameters : HTTPParameter? = nil, jobType : NetworkTaskType = .dataTask, closure : @escaping CompletionBlock) {
 		
 		self.init()
 		
@@ -40,7 +40,7 @@ class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
 		self.headers = urlHeaders
 		self.httpParam = parameters
 		self.encodeType = encoding
-		self.taskType = _taskType
+		self.taskType = jobType
 		
 		self.completionHandler = closure
 	}
@@ -69,13 +69,6 @@ class SRNetworkTask: SRNetworkOperation,SRNetworkManagerProtocol {
 		super.completeOpeartion()
 		let shared : SRNetworkManager = SRNetworkManager.sharedManager
 		shared.cancelSession()
-	}
-	
-	func enqueueOperation() -> Void{
-		
-		let shared : SRNetworkManager = SRNetworkManager.sharedManager
-		shared.operationQueue.addOperation(self)
-
 	}
 	
 	deinit {
